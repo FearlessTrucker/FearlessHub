@@ -12,27 +12,6 @@ body
     min-height: 100vh;
     background: #05101f;
 }
-.banner
-{
-    width: 80%;
-    height: 70%;
-    top: 25%;
-    left: 80px;
-    position: absolute;
-    color: white;
-}
-.app-text
-{
-    width: 50%;
-    float: left;
-}
-.app-text h1
-{
-    font-size: 43px;
-    width: 640px;
-    position: relative;
-    margin-left: 40px;
-}
 ul
 {
     display: flex;
@@ -100,4 +79,4 @@ ul li a:hover span:nth-child(2)
 {
     transform: translateY(-100%);
     transition-delay: 0s;
-} 
+}
