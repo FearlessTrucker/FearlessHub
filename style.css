@@ -21,7 +21,8 @@
 .active{
     color: #19dafa !important;
 }
-a{
+a
+{
     position: absolute;
     width: 150px;
     height: 45px;
@@ -37,8 +38,9 @@ a{
     background-size: 400%;
     border-radius: 30px;
     z-index: 1; 
-   }
-a:hover {
+}
+a:hover 
+{
     animation: animate 8s linear infinite;
    }
    @keyframes animate {
@@ -48,8 +50,9 @@ a:hover {
     100% {
      background-position: 400%;
     }
-   }
-a:before {
+}
+a:before 
+{
     content: '';
     position: absolute;
     top: -5px;
@@ -63,20 +66,15 @@ a:before {
     filter: blur(20px);
     opacity: 0;
     transition: 0.5s;
-   }
-a:hover:before {
+}
+a:hover:before 
+{
     filter: blur(20px);
     opacity: 1;
     animation: animate 8s linear infinite;
-   }
-.applynow-btn{
-    top: 40px;
-    right: 40px;
-    position: absolute;
-    text-decoration: none;
-    color: white;
 }
-.banner{
+.banner
+{
     width: 80%;
     height: 70%;
     top: 25%;
@@ -84,13 +82,20 @@ a:hover:before {
     position: absolute;
     color: white;
 }
-.app-text{
+.app-text
+{
     width: 50%;
     float: left;
 }
-.app-text h1{
+.app-text h1
+{
     font-size: 43px;
     width: 640px;
     position: relative;
     margin-left: 40px;
+}
+.app-text a
+{
+    margin-left: 40px;
+    margin-top: 15px;
 }
