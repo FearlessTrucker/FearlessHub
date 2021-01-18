@@ -1,27 +1,21 @@
-*{
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-.container{
-    width: 100%;
-    height: 100%;
+body
+{
+    display: flex;
+    min-height: 100vh;
     background: url(images/background.jpg);
-}
-.menu ul{
-    display: inline-flex;
-    margin: 55px;
-}
-.menu ul li{
-    list-style: none;
-    margin: 0 20px;
-    color: #b2b1b1;
-    cursor: pointer;
 }
 .active{
     color: #19dafa !important;
 }
-a
+.applynow-btn
 {
     position: absolute;
     width: 150px;
@@ -39,7 +33,7 @@ a
     border-radius: 30px;
     z-index: 1; 
 }
-a:hover 
+.applynow-btn:hover 
 {
     animation: animate 8s linear infinite;
    }
@@ -51,7 +45,7 @@ a:hover
      background-position: 400%;
     }
 }
-a:before 
+.applynow-btn:before 
 {
     content: '';
     position: absolute;
@@ -67,7 +61,7 @@ a:before
     opacity: 0;
     transition: 0.5s;
 }
-a:hover:before 
+.applynow-btn:hover:before 
 {
     filter: blur(20px);
     opacity: 1;
@@ -99,3 +93,71 @@ a:hover:before
     margin-left: 40px;
     margin-top: 15px;
 }
+ul
+{
+    display: flex;
+    margin-top: 40px;
+    margin-left: 120px;
+    flex-direction: row;
+}
+ul li
+{
+    position: relative;
+    list-style: none;
+    margin: 5px;
+}
+ul li a
+{
+    position: relative;
+    height: 40px;
+    display: block;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    overflow: hidden;
+}
+ul li a::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ec333f;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+    transition-delay: 0s;
+}
+ul li a:hover::before
+{
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    transition-delay: 0.5s;
+}
+ul li a span 
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    color: #fff;
+    font-size: 24px;
+    transition-delay: 0.5s;
+}
+ul li a:hover span:nth-child(1)
+{
+    transform: translateY(-100%);
+    transition-delay: 0s;
+} 
+ul li a:hover span:nth-child(2)
+{
+    transform: translateY(-100%);
+    transition-delay: 0s;
+} 
