@@ -95,20 +95,4 @@ li a:hover:not(.active)
 .title 
 {
     color: rgb(255, 255, 255);
-} 
-.button 
-{
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-}
-.button:hover 
-{
-    background-color: #555;
 }
