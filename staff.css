@@ -14,69 +14,101 @@ body
 }
 ul
 {
-    display: flex;
-    margin-top: 40px;
-    margin-left: 105px;
-    flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(22, 22, 22);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
-ul li
+li 
 {
-    position: relative;
-    list-style: none;
-    margin: 5px;
+  float: left;
 }
-ul li a
+li a 
 {
-    position: relative;
-    height: 40px;
-    display: block;
-    text-decoration: none;
-    padding: 5px 10px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    overflow: hidden;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
-ul li a::before
+li a:hover:not(.active) 
 {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #ec333f;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s ease-in-out;
-    transition-delay: 0s;
+  background-color: #111;
 }
-ul li a:hover::before
+.active 
 {
-    transform: scaleX(1);
-    transform-origin: right;
-    transition: transform 0.3s ease-in-out;
-    transition-delay: 0.3s;
+  background-color: #4CAF50;
 }
-ul li a span 
+.row
 {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-    color: #fff;
-    font-size: 24px;
-    transition-delay: 0.3s;
+  margin-top: 5%;
+  margin-right: 5%;
+  margin-left: 5%;
 }
-ul li a:hover span:nth-child(1)
+/* Three columns side by side */
+.column 
 {
-    transform: translateY(-120%);
-    transition-delay: 0s;
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+  
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) 
+{
+    .column 
+    {
+      width: 100%;
+      display: block;
+    }
 } 
-ul li a:hover span:nth-child(2)
+/* Add some shadows to create a card effect */
+.card 
 {
-    transform: translateY(-100%);
-    transition-delay: 0s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+} 
+/* Some left and right padding inside the container */
+.container 
+{
+    padding: 0 16px;
+} 
+/* Clear floats */
+.container::after, .row::after 
+{
+    content: "";
+    clear: both;
+    display: table;
+}
+.container p
+{
+    color: white;
+}
+.container h2
+{
+    color: white;
+} 
+.title 
+{
+    color: rgb(255, 255, 255);
+} 
+.button 
+{
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+.button:hover 
+{
+    background-color: #555;
 }
